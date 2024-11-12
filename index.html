@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>神秘寻宝游戏</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="player-info">
+            <h2>玩家信息</h2>
+            <div id="playerDetails"></div>
+            <button id="newPlayer">新玩家</button>
+            <div class="audio-controls">
+                <button id="toggleMusic">
+                    <span class="music-on">🔊</span>
+                    <span class="music-off">🔈</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="game-content">
+            <div id="story-text"></div>
+            <div id="game-controls">
+                <button id="startGame">开始寻宝</button>
+            </div>
+        </div>
+        
+        <div class="game-history">
+            <h2>游戏历史</h2>
+            <div id="historyList"></div>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="audio/background.mp3" type="audio/mp3">
+    </audio>
+    <audio id="effectSound">
+        <source src="audio/effect.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="scripts/treasureMap.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html> 

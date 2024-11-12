@@ -1,0 +1,152 @@
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+.game-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    gap: 30px;
+}
+
+.player-info, .game-content, .game-history {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.game-content {
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#story-text {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+button {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #357abd;
+}
+
+.game-history {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.history-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #333;
+    border-radius: 4px;
+}
+
+.scene-image {
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    background-color: #1a1a1a;
+    padding: 10px;
+}
+
+.scene-image:hover {
+    transform: scale(1.02);
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.option-button {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.audio-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.audio-controls button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.music-off {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .game-container {
+        grid-template-columns: 200px 1fr 200px;
+    }
+    
+    .scene-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 992px) {
+    .game-container {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+    }
+    
+    .scene-image {
+        height: 500px;
+    }
+    
+    .player-info, .game-history {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+} 
